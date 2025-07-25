@@ -20,22 +20,44 @@ h3 {
     margin-top: 0;
 }
 
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 575px;
     height: 385px;
     background-color: #1B244A;
+    padding: 1em;
 }
 
-#home-wrapper, #away-wrapper{
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
 
+#home-wrapper, #away-wrapper {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .score-box{
-font-family: 'ScoreFont', sans-serif;
+    font-family: 'ScoreFont', sans-serif;
     background-color: #080001;
+    border: 5px solid #080001;
     color: #F94F6D;
     width: 155px;
     height: 120px;
@@ -45,14 +67,14 @@ font-family: 'ScoreFont', sans-serif;
     align-items: center;
 }
 
-.counterContainer{
-    
+.counterContainer {
+    width: 60%;
 }
 
 .counterContainer > ul{
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0;
 }
 
@@ -68,4 +90,13 @@ font-family: 'ScoreFont', sans-serif;
     color: #99aad8;
     font-family: 'ScoreFont', sans-serif;
     padding: 1em;
+}
+
+button.reset-btn{
+    background: none;
+    border: 1px solid #9aabd8;
+    border-radius: 5px;
+    padding: .5em 1em;
+    color: #9aabd8;
+    font-size: 1em;
 }

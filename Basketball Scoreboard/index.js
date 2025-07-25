@@ -1,6 +1,6 @@
 //Make scoreboard that increases by the increment you click
 
-//Stretch Goals
+/*******Stretch Goals********/
 //New Game Button to reset scores
 //Highlight the leader
 //Add a few more counters (period, fouls, timer)
@@ -22,7 +22,6 @@ let homeScore = 0;
 let awayScore = 0;
 
 function plusOneHome(){
-    console.log("+1 Home");
     homeScore += 1;
     updateHomeScore(homeScore);
 }
@@ -38,7 +37,6 @@ function plusThreeHome(){
 }
 
 function plusOneAway(){
-    console.log("+1 Away");
     awayScore += 1;
     updateAwayScore(awayScore);
 }
@@ -55,9 +53,36 @@ function plusThreeAway(){
 
 function updateHomeScore(homeScore){
     homeScoreDisplay.textContent = homeScore;
+    leaderCheck()
 }
 
 function updateAwayScore(awayScore){
     awayScoreDisplay.textContent = awayScore;
+    leaderCheck()
+}
+
+function leaderCheck(){
+    if(homeScore > awayScore){
+        console.log('home winning');
+        homeScoreDisplay.style.border = '5px solid green';
+        awayScoreDisplay.style.border = '5px solid #080001';
+    } else if(awayScore > homeScore){
+        console.log('away winning');
+        awayScoreDisplay.style.border = '5px solid green';
+        homeScoreDisplay.style.border = '5px solid #080001';
+    } else{
+        console.log('tied');
+        homeScoreDisplay.style.border = '5px solid #080001';
+        awayScoreDisplay.style.border = '5px solid #080001';
+    }
+}
+
+function resetScores(){
+    homeScore = 0;
+    awayScore = 0;
+
+    updateAwayScore(awayScore);
+    updateHomeScore(homeScore);
+    leaderCheck()
 }
 
