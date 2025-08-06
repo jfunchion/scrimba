@@ -1,6 +1,7 @@
 //Make scoreboard that increases by the increment you click
 
 /*******Stretch Goals********/
+//https://www.figma.com/design/jKVteopbu2FMvKo4IKfXMS/Basketball-Scoreboard--Copy-?node-id=107-158&t=3OAgzMUJ1NyJWJTI-0
 //New Game Button to reset scores
 //Highlight the leader
 //Add a few more counters (period, fouls, timer)
